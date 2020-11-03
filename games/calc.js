@@ -1,5 +1,25 @@
 import { runGame, randomInteger } from '../src/index.js';
 
+function calc(operation, leftOperand, rightOperand) {
+  let answer;
+
+  switch (operation) {
+    case '+':
+      answer = leftOperand + rightOperand;
+      break;
+    case '-':
+      answer = leftOperand - rightOperand;
+      break;
+    case '*':
+      answer = leftOperand * rightOperand;
+      break;
+    default:
+      break;
+  }
+
+  return answer;
+}
+
 export default async function run() {
   const operations = ['+', '-', '*'];
   const description = 'What is the result of the expression?';
@@ -10,25 +30,9 @@ export default async function run() {
 
     const question = `${leftOperand} ${operation} ${rightOperand}`;
 
-    let answer;
-
-    switch (operation) {
-      case '+':
-        answer = leftOperand + rightOperand;
-        break;
-      case '-':
-        answer = leftOperand - rightOperand;
-        break;
-      case '*':
-        answer = leftOperand * rightOperand;
-        break;
-      default:
-        break;
-    }
-
     return {
       question,
-      answer,
+      answer: calc(operation, leftOperand, rightOperand),
     };
   };
 
