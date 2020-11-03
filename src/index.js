@@ -13,7 +13,7 @@ export async function runGame(description, questionAndAnswer) {
 
     const userAnswer = await promptly.prompt('Your answer:? ');
 
-    if (userAnswer !== answer) {
+    if (userAnswer !== answer.toString()) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
