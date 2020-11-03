@@ -11,3 +11,5 @@ Install: https://asciinema.org/a/kNOTCdyDIMSZwCmiwHyUwCVq5
 brain-even fail: https://asciinema.org/a/5gjzpGmoHY852IOMx0oGsgQ5Y
 
 brain-event success: https://asciinema.org/a/6sxezUpoB6W2AY3pxunH6d1ro
+
+brain-calc: https://asciinema.org/a/7Ps9BRDwcB9gPMEWvNlhZgiSP
