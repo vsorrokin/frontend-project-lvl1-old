@@ -15,3 +15,5 @@ brain-event success: https://asciinema.org/a/6sxezUpoB6W2AY3pxunH6d1ro
 brain-calc: https://asciinema.org/a/7Ps9BRDwcB9gPMEWvNlhZgiSP
 
 brain-gcd: https://asciinema.org/a/oR4ZmieYucMhNpDqbOX1I9zsp
+
+brain-progression: https://asciinema.org/a/PJx8CkjsKlsQ9xz3kMGYRzcAw
