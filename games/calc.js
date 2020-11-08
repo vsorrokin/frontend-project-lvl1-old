@@ -1,24 +1,4 @@
-import { runGame, randomInteger } from '../src/index.js';
-
-export function calc(operation, leftOperand, rightOperand) {
-  let answer;
-
-  switch (operation) {
-    case '+':
-      answer = leftOperand + rightOperand;
-      break;
-    case '-':
-      answer = leftOperand - rightOperand;
-      break;
-    case '*':
-      answer = leftOperand * rightOperand;
-      break;
-    default:
-      break;
-  }
-
-  return answer;
-}
+import { runGame, randomInteger, calc } from '../src/index.js';
 
 export default function run() {
   const operations = ['+', '-', '*'];

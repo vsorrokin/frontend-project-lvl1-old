@@ -31,11 +31,7 @@ export function randomInteger(min, max) {
   return Math.round(rand);
 }
 
-export function getProgression(length = 10, startFrom = 0,
-  startTo = 20, stepFrom = 1, stepTo = 20) {
-  const start = randomInteger(startFrom, startTo);
-  const step = randomInteger(stepFrom, stepTo);
-
+export function makeProgression(length, start, step) {
   const result = [];
 
   for (let i = 0; i < length; i += 1) {
@@ -78,4 +74,24 @@ export function isPrime(n) {
   }
 
   return result;
+}
+
+export function calc(operation, leftOperand, rightOperand) {
+  let answer;
+
+  switch (operation) {
+    case '+':
+      answer = leftOperand + rightOperand;
+      break;
+    case '-':
+      answer = leftOperand - rightOperand;
+      break;
+    case '*':
+      answer = leftOperand * rightOperand;
+      break;
+    default:
+      break;
+  }
+
+  return answer;
 }
