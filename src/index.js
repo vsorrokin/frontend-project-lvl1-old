@@ -1,6 +1,6 @@
 import promptly from 'promptly';
 
-export async function runGame(description, questionAndAnswer) {
+export default async function runGame(description, questionAndAnswer) {
   console.log('Welcome to the Brain Games!');
   const name = await promptly.prompt('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -16,7 +16,7 @@ export async function runGame(description, questionAndAnswer) {
 
     const userAnswer = await promptly.prompt('Your answer:? ');
 
-    if (userAnswer !== answer.toString()) {
+    if (userAnswer !== answer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
@@ -25,9 +25,4 @@ export async function runGame(description, questionAndAnswer) {
   }
 
   console.log(`Congratulations, ${name}!`);
-}
-
-export function randomInteger(min, max) {
-  const rand = min - 0.5 + Math.random() * (max - min + 1);
-  return Math.round(rand);
 }

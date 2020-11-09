@@ -1,4 +1,5 @@
-import { runGame, randomInteger } from '../src/index.js';
+import runGame from '../src/index.js';
+import { randomInteger } from '../src/utils.js';
 
 function isEven(n) {
   return n % 2 === 0;

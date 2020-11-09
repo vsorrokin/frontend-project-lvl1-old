@@ -1,4 +1,5 @@
-import { runGame, randomInteger } from '../src/index.js';
+import runGame from '../src/index.js';
+import { randomInteger } from '../src/utils.js';
 
 function calc(operation, leftOperand, rightOperand) {
   let answer;
@@ -23,7 +24,7 @@ function calc(operation, leftOperand, rightOperand) {
 export default function run() {
   const operations = ['+', '-', '*'];
   const description = 'What is the result of the expression?';
-  const questionAndAnswer = () => {
+  const getQuestionAndAnswer = () => {
     const minOperandValue = 0;
     const maxOperandValue = 20;
     const operation = operations[randomInteger(0, randomInteger.length - 1)];
@@ -34,9 +35,9 @@ export default function run() {
 
     return {
       question,
-      answer: calc(operation, leftOperand, rightOperand),
+      answer: String(calc(operation, leftOperand, rightOperand)),
     };
   };
 
-  runGame(description, questionAndAnswer);
+  runGame(description, getQuestionAndAnswer);
 }

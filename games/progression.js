@@ -1,4 +1,5 @@
-import { runGame, randomInteger } from '../src/index.js';
+import runGame from '../src/index.js';
+import { randomInteger } from '../src/utils.js';
 
 function makeProgression(length, start, step) {
   const result = [];
@@ -27,13 +28,13 @@ const progressionConfig = {
 
 export default function run() {
   const description = 'What number is missing in the progression?';
-  const questionAndAnswer = () => {
+  const getQuestionAndAnswer = () => {
     const length = randomInteger(progressionConfig.length.min, progressionConfig.length.max);
     const start = randomInteger(progressionConfig.start.min, progressionConfig.start.max);
     const step = randomInteger(progressionConfig.step.min, progressionConfig.step.max);
     const progression = makeProgression(length, start, step);
     const hiddenIndex = randomInteger(0, length - 1);
-    const answer = progression[hiddenIndex];
+    const answer = String(progression[hiddenIndex]);
     progression[hiddenIndex] = '..';
 
     return {
@@ -42,5 +43,5 @@ export default function run() {
     };
   };
 
-  runGame(description, questionAndAnswer);
+  runGame(description, getQuestionAndAnswer);
 }

@@ -1,23 +1,22 @@
-import { runGame, randomInteger } from '../src/index.js';
+import runGame from '../src/index.js';
+import { randomInteger } from '../src/utils.js';
 
 export function isPrime(n) {
+  if (n < 2) return false;
   if (n < 4) return true;
-
-  let result = true;
 
   for (let i = 2; i < n / 2; i += 1) {
     if (n % i === 0) {
-      result = false;
-      break;
+      return false;
     }
   }
 
-  return result;
+  return true;
 }
 
 export default function run() {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const questionAndAnswer = () => {
+  const getQuestionAndAnswer = () => {
     const minNum = 1;
     const maxNum = 3571;
     const num = randomInteger(minNum, maxNum);
@@ -28,5 +27,5 @@ export default function run() {
     };
   };
 
-  runGame(description, questionAndAnswer);
+  runGame(description, getQuestionAndAnswer);
 }
