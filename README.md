@@ -1,10 +1,5 @@
 ### Hexlet tests and linter status:
-
-[![Linter Status](https://github.com/vsorrokin/frontend-project-lvl1/workflows/linter/badge.svg)](https://github.com/vsorrokin/frontend-project-lvl1/actions)
-
-![Actions Status](https://github.com/vsorrokin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/1a9bff4ece6e4019f74e/maintainability)](https://codeclimate.com/github/vsorrokin/frontend-project-lvl1/maintainability)
+[![Linter Status](https://github.com/vsorrokin/frontend-project-lvl1/workflows/linter/badge.svg)](https://github.com/vsorrokin/frontend-project-lvl1/actions) ![Actions Status](https://github.com/vsorrokin/frontend-project-lvl1/workflows/hexlet-check/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/1a9bff4ece6e4019f74e/maintainability)](https://codeclimate.com/github/vsorrokin/frontend-project-lvl1/maintainability)
 
 Install: https://asciinema.org/a/kNOTCdyDIMSZwCmiwHyUwCVq5
 
