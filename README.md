@@ -4,7 +4,7 @@
 
 ![Actions Status](https://github.com/vsorrokin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1a9bff4ece6e4019f74e/maintainability)](https://codeclimate.com/github/vsorrokin/frontend-project-lvl1/maintainability)
 
 Install: https://asciinema.org/a/kNOTCdyDIMSZwCmiwHyUwCVq5
 
