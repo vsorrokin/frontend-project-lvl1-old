@@ -1,4 +1,14 @@
-import { runGame, randomInteger, makeProgression } from '../src/index.js';
+import { runGame, randomInteger } from '../src/index.js';
+
+function makeProgression(length, start, step) {
+  const result = [];
+
+  for (let i = 0; i < length; i += 1) {
+    result.push(start + step * i);
+  }
+
+  return result;
+}
 
 const progressionConfig = {
   length: {

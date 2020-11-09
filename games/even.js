@@ -1,8 +1,12 @@
-import { runGame, randomInteger, isEven } from '../src/index.js';
+import { runGame, randomInteger } from '../src/index.js';
+
+function isEven(n) {
+  return n % 2 === 0;
+}
 
 export default function run() {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const questionAndAnswer = () => {
+  const getQuestionAndAnswer = () => {
     const minNum = 1;
     const maxNum = 100;
     const num = randomInteger(minNum, maxNum);
@@ -13,5 +17,5 @@ export default function run() {
     };
   };
 
-  runGame(description, questionAndAnswer);
+  runGame(description, getQuestionAndAnswer);
 }

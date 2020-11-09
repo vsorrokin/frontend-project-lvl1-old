@@ -1,8 +1,9 @@
 import promptly from 'promptly';
-import cli from './cli.js';
 
 export async function runGame(description, questionAndAnswer) {
-  const name = await cli();
+  console.log('Welcome to the Brain Games!');
+  const name = await promptly.prompt('May I have your name? ');
+  console.log(`Hello, ${name}!`);
 
   console.log(description);
 
@@ -29,69 +30,4 @@ export async function runGame(description, questionAndAnswer) {
 export function randomInteger(min, max) {
   const rand = min - 0.5 + Math.random() * (max - min + 1);
   return Math.round(rand);
-}
-
-export function makeProgression(length, start, step) {
-  const result = [];
-
-  for (let i = 0; i < length; i += 1) {
-    result.push(start + step * i);
-  }
-
-  return result;
-}
-
-export function isEven(n) {
-  return n % 2 === 0;
-}
-
-export function gcd(num1, num2) {
-  const min = num1 > num2 ? num2 : num1;
-  const max = num1 < num2 ? num2 : num1;
-
-  let result;
-
-  for (let i = min; i > 0; i -= 1) {
-    if (min % i === 0 && max % i === 0) {
-      result = i;
-      break;
-    }
-  }
-
-  return result;
-}
-
-export function isPrime(n) {
-  if (n < 4) return true;
-
-  let result = true;
-
-  for (let i = 2; i < n / 2; i += 1) {
-    if (n % i === 0) {
-      result = false;
-      break;
-    }
-  }
-
-  return result;
-}
-
-export function calc(operation, leftOperand, rightOperand) {
-  let answer;
-
-  switch (operation) {
-    case '+':
-      answer = leftOperand + rightOperand;
-      break;
-    case '-':
-      answer = leftOperand - rightOperand;
-      break;
-    case '*':
-      answer = leftOperand * rightOperand;
-      break;
-    default:
-      break;
-  }
-
-  return answer;
 }
