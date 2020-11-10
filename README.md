@@ -9,8 +9,8 @@
 
 Run commands:
 
-    npm install;
-    npm link;
+    npm install
+    npm link
 
 Example: https://asciinema.org/a/kNOTCdyDIMSZwCmiwHyUwCVq5
 
